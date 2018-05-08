@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A65463020A1BF6C00CD2B2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65462F20A1BF6C00CD2B2A /* AppDelegate.swift */; };
+		5A65463220A1BF6C00CD2B2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65463120A1BF6C00CD2B2A /* ViewController.swift */; };
+		5A65463520A1BF6C00CD2B2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A65463320A1BF6C00CD2B2A /* Main.storyboard */; };
+		5A65463720A1BF7100CD2B2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A65463620A1BF7100CD2B2A /* Assets.xcassets */; };
+		5A65463A20A1BF7100CD2B2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A65463820A1BF7100CD2B2A /* LaunchScreen.storyboard */; };
+		5A65464520A1BF7100CD2B2A /* MajanCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65464420A1BF7100CD2B2A /* MajanCameraTests.swift */; };
+		5A65465020A1BF7100CD2B2A /* MajanCameraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65464F20A1BF7100CD2B2A /* MajanCameraUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5A65464120A1BF7100CD2B2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A65462420A1BF6C00CD2B2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A65462B20A1BF6C00CD2B2A;
+			remoteInfo = MajanCamera;
+		};
+		5A65464C20A1BF7100CD2B2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A65462420A1BF6C00CD2B2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A65462B20A1BF6C00CD2B2A;
+			remoteInfo = MajanCamera;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5A65462C20A1BF6C00CD2B2A /* MajanCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MajanCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A65462F20A1BF6C00CD2B2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5A65463120A1BF6C00CD2B2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5A65463420A1BF6C00CD2B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5A65463620A1BF7100CD2B2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A65463920A1BF7100CD2B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5A65463B20A1BF7100CD2B2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A65464020A1BF7100CD2B2A /* MajanCameraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MajanCameraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A65464420A1BF7100CD2B2A /* MajanCameraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajanCameraTests.swift; sourceTree = "<group>"; };
+		5A65464620A1BF7100CD2B2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A65464B20A1BF7100CD2B2A /* MajanCameraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MajanCameraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A65464F20A1BF7100CD2B2A /* MajanCameraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajanCameraUITests.swift; sourceTree = "<group>"; };
+		5A65465120A1BF7100CD2B2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A65462920A1BF6C00CD2B2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A65463D20A1BF7100CD2B2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A65464820A1BF7100CD2B2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A65462320A1BF6C00CD2B2A = {
+			isa = PBXGroup;
+			children = (
+				5A65462E20A1BF6C00CD2B2A /* MajanCamera */,
+				5A65464320A1BF7100CD2B2A /* MajanCameraTests */,
+				5A65464E20A1BF7100CD2B2A /* MajanCameraUITests */,
+				5A65462D20A1BF6C00CD2B2A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5A65462D20A1BF6C00CD2B2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A65462C20A1BF6C00CD2B2A /* MajanCamera.app */,
+				5A65464020A1BF7100CD2B2A /* MajanCameraTests.xctest */,
+				5A65464B20A1BF7100CD2B2A /* MajanCameraUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A65462E20A1BF6C00CD2B2A /* MajanCamera */ = {
+			isa = PBXGroup;
+			children = (
+				5A65462F20A1BF6C00CD2B2A /* AppDelegate.swift */,
+				5A65463120A1BF6C00CD2B2A /* ViewController.swift */,
+				5A65463320A1BF6C00CD2B2A /* Main.storyboard */,
+				5A65463620A1BF7100CD2B2A /* Assets.xcassets */,
+				5A65463820A1BF7100CD2B2A /* LaunchScreen.storyboard */,
+				5A65463B20A1BF7100CD2B2A /* Info.plist */,
+			);
+			path = MajanCamera;
+			sourceTree = "<group>";
+		};
+		5A65464320A1BF7100CD2B2A /* MajanCameraTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A65464420A1BF7100CD2B2A /* MajanCameraTests.swift */,
+				5A65464620A1BF7100CD2B2A /* Info.plist */,
+			);
+			path = MajanCameraTests;
+			sourceTree = "<group>";
+		};
+		5A65464E20A1BF7100CD2B2A /* MajanCameraUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5A65464F20A1BF7100CD2B2A /* MajanCameraUITests.swift */,
+				5A65465120A1BF7100CD2B2A /* Info.plist */,
+			);
+			path = MajanCameraUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A65462B20A1BF6C00CD2B2A /* MajanCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A65465420A1BF7100CD2B2A /* Build configuration list for PBXNativeTarget "MajanCamera" */;
+			buildPhases = (
+				5A65462820A1BF6C00CD2B2A /* Sources */,
+				5A65462920A1BF6C00CD2B2A /* Frameworks */,
+				5A65462A20A1BF6C00CD2B2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MajanCamera;
+			productName = MajanCamera;
+			productReference = 5A65462C20A1BF6C00CD2B2A /* MajanCamera.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5A65463F20A1BF7100CD2B2A /* MajanCameraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A65465720A1BF7100CD2B2A /* Build configuration list for PBXNativeTarget "MajanCameraTests" */;
+			buildPhases = (
+				5A65463C20A1BF7100CD2B2A /* Sources */,
+				5A65463D20A1BF7100CD2B2A /* Frameworks */,
+				5A65463E20A1BF7100CD2B2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A65464220A1BF7100CD2B2A /* PBXTargetDependency */,
+			);
+			name = MajanCameraTests;
+			productName = MajanCameraTests;
+			productReference = 5A65464020A1BF7100CD2B2A /* MajanCameraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5A65464A20A1BF7100CD2B2A /* MajanCameraUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A65465A20A1BF7100CD2B2A /* Build configuration list for PBXNativeTarget "MajanCameraUITests" */;
+			buildPhases = (
+				5A65464720A1BF7100CD2B2A /* Sources */,
+				5A65464820A1BF7100CD2B2A /* Frameworks */,
+				5A65464920A1BF7100CD2B2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A65464D20A1BF7100CD2B2A /* PBXTargetDependency */,
+			);
+			name = MajanCameraUITests;
+			productName = MajanCameraUITests;
+			productReference = 5A65464B20A1BF7100CD2B2A /* MajanCameraUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A65462420A1BF6C00CD2B2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Syunyo Kawamoto";
+				TargetAttributes = {
+					5A65462B20A1BF6C00CD2B2A = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					5A65463F20A1BF7100CD2B2A = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 5A65462B20A1BF6C00CD2B2A;
+					};
+					5A65464A20A1BF7100CD2B2A = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 5A65462B20A1BF6C00CD2B2A;
+					};
+				};
+			};
+			buildConfigurationList = 5A65462720A1BF6C00CD2B2A /* Build configuration list for PBXProject "MajanCamera" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5A65462320A1BF6C00CD2B2A;
+			productRefGroup = 5A65462D20A1BF6C00CD2B2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A65462B20A1BF6C00CD2B2A /* MajanCamera */,
+				5A65463F20A1BF7100CD2B2A /* MajanCameraTests */,
+				5A65464A20A1BF7100CD2B2A /* MajanCameraUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A65462A20A1BF6C00CD2B2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A65463A20A1BF7100CD2B2A /* LaunchScreen.storyboard in Resources */,
+				5A65463720A1BF7100CD2B2A /* Assets.xcassets in Resources */,
+				5A65463520A1BF6C00CD2B2A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A65463E20A1BF7100CD2B2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A65464920A1BF7100CD2B2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A65462820A1BF6C00CD2B2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A65463220A1BF6C00CD2B2A /* ViewController.swift in Sources */,
+				5A65463020A1BF6C00CD2B2A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A65463C20A1BF7100CD2B2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A65464520A1BF7100CD2B2A /* MajanCameraTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A65464720A1BF7100CD2B2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A65465020A1BF7100CD2B2A /* MajanCameraUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A65464220A1BF7100CD2B2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A65462B20A1BF6C00CD2B2A /* MajanCamera */;
+			targetProxy = 5A65464120A1BF7100CD2B2A /* PBXContainerItemProxy */;
+		};
+		5A65464D20A1BF7100CD2B2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A65462B20A1BF6C00CD2B2A /* MajanCamera */;
+			targetProxy = 5A65464C20A1BF7100CD2B2A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5A65463320A1BF6C00CD2B2A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A65463420A1BF6C00CD2B2A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5A65463820A1BF7100CD2B2A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A65463920A1BF7100CD2B2A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5A65465220A1BF7100CD2B2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5A65465320A1BF7100CD2B2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5A65465520A1BF7100CD2B2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DZCQ76F8J7;
+				INFOPLIST_FILE = MajanCamera/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = syunyooo.MajanCamera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A65465620A1BF7100CD2B2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DZCQ76F8J7;
+				INFOPLIST_FILE = MajanCamera/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = syunyooo.MajanCamera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5A65465820A1BF7100CD2B2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DZCQ76F8J7;
+				INFOPLIST_FILE = MajanCameraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = syunyooo.MajanCameraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MajanCamera.app/MajanCamera";
+			};
+			name = Debug;
+		};
+		5A65465920A1BF7100CD2B2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DZCQ76F8J7;
+				INFOPLIST_FILE = MajanCameraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = syunyooo.MajanCameraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MajanCamera.app/MajanCamera";
+			};
+			name = Release;
+		};
+		5A65465B20A1BF7100CD2B2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DZCQ76F8J7;
+				INFOPLIST_FILE = MajanCameraUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = syunyooo.MajanCameraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MajanCamera;
+			};
+			name = Debug;
+		};
+		5A65465C20A1BF7100CD2B2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DZCQ76F8J7;
+				INFOPLIST_FILE = MajanCameraUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = syunyooo.MajanCameraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MajanCamera;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A65462720A1BF6C00CD2B2A /* Build configuration list for PBXProject "MajanCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A65465220A1BF7100CD2B2A /* Debug */,
+				5A65465320A1BF7100CD2B2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A65465420A1BF7100CD2B2A /* Build configuration list for PBXNativeTarget "MajanCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A65465520A1BF7100CD2B2A /* Debug */,
+				5A65465620A1BF7100CD2B2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A65465720A1BF7100CD2B2A /* Build configuration list for PBXNativeTarget "MajanCameraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A65465820A1BF7100CD2B2A /* Debug */,
+				5A65465920A1BF7100CD2B2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A65465A20A1BF7100CD2B2A /* Build configuration list for PBXNativeTarget "MajanCameraUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A65465B20A1BF7100CD2B2A /* Debug */,
+				5A65465C20A1BF7100CD2B2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5A65462420A1BF6C00CD2B2A /* Project object */;
+}
