@@ -11,12 +11,12 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     let picker = UIImagePickerController()
+    let indicator = UIActivityIndicatorView()
     
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        detect(image: self.imageView.image!)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -29,9 +29,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         print(#function)
+        picker.dismiss(animated: true, completion: nil)
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         imageView.image = image
-        var completion:(()->Void)? = nil
+        showIndicator()
         Api.detect(image: image, success: {
             (pis) in dump(pis)
             
@@ -40,32 +41,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             vc.pis = pis
             self.present(vc, animated: true, completion: nil)
             
-            
-        }, failure: {
-            error in
-            completion = {self.showSimpleAlert(title: "Error", message: error.debugDescription, ok_handler: nil, cancel_handler: nil)}
-        }, completion: {
-            _ in picker.dismiss(animated: true, completion: completion)
-        })
-    }
-    
-    func detect(image:UIImage){
-        Api.detect(image: image, success: {
-            (pis) in dump(pis)
-            
-            let vc:CheckViewController = self.storyboard?.instantiateViewController(withIdentifier: "CheckViewController") as! CheckViewController
-            vc.piImage = image
-            vc.pis = pis
-            self.present(vc, animated: true, completion: nil)
             
         }, failure: {
             error in
             self.showSimpleAlert(title: "Error", message: error.debugDescription, ok_handler: nil, cancel_handler: nil)
-        }, completion: nil)
+        }, completion: {
+            _ in
+            self.stopIndicator()
+        })
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         print(#function)
+        picker.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cameraButtonTapped(_ sender: Any) {
@@ -77,4 +65,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         picker.sourceType = .photoLibrary
         present(picker, animated: true, completion: nil)
     }
+    
+    func showIndicator() {
+        indicator.activityIndicatorViewStyle = .whiteLarge
+        indicator.center = self.view.center
+        indicator.color = UIColor.gray
+        indicator.hidesWhenStopped = true
+        self.view.addSubview(indicator)
+        self.view.bringSubview(toFront: indicator)
+        indicator.startAnimating()
+    }
+    
+    func stopIndicator(){
+        indicator.stopAnimating()
+    }
+
 }
