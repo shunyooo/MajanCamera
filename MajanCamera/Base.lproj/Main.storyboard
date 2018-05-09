@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,129 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MajanCamera" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cOa-hu-Wbu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maxresdefault" translatesAutoresizingMaskIntoConstraints="NO" id="9oO-Id-F53">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="T6q-0R-lFv">
+                                        <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZl-OJ-FwT">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="100"/>
+                                                <color key="backgroundColor" red="0.79980443769999998" green="0.36358474130000001" blue="0.38451181509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="23"/>
+                                                <state key="normal" title="Camera">
+                                                    <color key="titleColor" red="0.96912556890000001" green="0.96985918280000005" blue="0.96923929450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cameraButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3SZ-pw-Rg3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZs-aS-3Rv">
+                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="100"/>
+                                                <color key="backgroundColor" red="0.4293498930243585" green="0.64666987338883253" blue="0.18809408489132942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                                <state key="normal" title="Album">
+                                                    <color key="titleColor" red="0.96912556890000001" green="0.96985918280000005" blue="0.96923929450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="albumButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AnH-P6-lWP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="3CW-d3-ZoB"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9oO-Id-F53" firstAttribute="leading" secondItem="cOa-hu-Wbu" secondAttribute="leading" id="AEs-DD-Bkm"/>
+                                    <constraint firstAttribute="trailing" secondItem="9oO-Id-F53" secondAttribute="trailing" id="V2I-8g-haM"/>
+                                    <constraint firstItem="T6q-0R-lFv" firstAttribute="leading" secondItem="cOa-hu-Wbu" secondAttribute="leading" id="iq1-1v-ybX"/>
+                                    <constraint firstAttribute="trailing" secondItem="T6q-0R-lFv" secondAttribute="trailing" id="nfp-4n-Jyo"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cOa-hu-Wbu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IKg-9v-Qky"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cOa-hu-Wbu" secondAttribute="bottom" id="MfJ-cH-qHU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cOa-hu-Wbu" secondAttribute="trailing" id="U9g-bA-rIg"/>
+                            <constraint firstItem="cOa-hu-Wbu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZM1-NP-bBM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="9oO-Id-F53" id="EM6-J1-xf1"/>
+                        <segue destination="jhx-wB-CNG" kind="show" identifier="toCheck" id="TQd-vt-s9n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="124" y="136"/>
+        </scene>
+        <!--Check View Controller-->
+        <scene sceneID="CG8-9R-Kr3">
+            <objects>
+                <viewController storyboardIdentifier="CheckViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jhx-wB-CNG" customClass="CheckViewController" customModule="MajanCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3sw-ld-CzS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DdT-d2-g1g">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6sU-vg-NfL">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="552"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3k-ST-Ecx">
+                                        <rect key="frame" x="0.0" y="552" width="375" height="115"/>
+                                        <color key="backgroundColor" red="0.1523431838" green="0.42942780260000002" blue="0.73219382759999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="115" id="l2c-sn-9XM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="23"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" red="0.96912556890000001" green="0.96985918280000005" blue="0.96923929450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="jhx-wB-CNG" eventType="touchUpInside" id="UjD-DQ-gyC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="C3k-ST-Ecx" secondAttribute="trailing" id="NJj-m0-naG"/>
+                                    <constraint firstItem="C3k-ST-Ecx" firstAttribute="leading" secondItem="DdT-d2-g1g" secondAttribute="leading" id="SZ6-FS-oCv"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bVf-BH-BEZ" firstAttribute="trailing" secondItem="DdT-d2-g1g" secondAttribute="trailing" id="USD-eX-9Dn"/>
+                            <constraint firstItem="bVf-BH-BEZ" firstAttribute="bottom" secondItem="DdT-d2-g1g" secondAttribute="bottom" id="Y2X-Sa-SQR"/>
+                            <constraint firstItem="DdT-d2-g1g" firstAttribute="leading" secondItem="3sw-ld-CzS" secondAttribute="leading" id="dmj-zf-Sjl"/>
+                            <constraint firstItem="DdT-d2-g1g" firstAttribute="top" secondItem="3sw-ld-CzS" secondAttribute="top" id="rbA-BL-A7g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bVf-BH-BEZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="6sU-vg-NfL" id="PrN-Z6-fGe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="279-s4-vuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066.4000000000001" y="136.28185907046478"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="maxresdefault" width="1280" height="720"/>
+    </resources>
 </document>

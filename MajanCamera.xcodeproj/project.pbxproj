@@ -14,6 +14,16 @@
 		5A65463A20A1BF7100CD2B2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A65463820A1BF7100CD2B2A /* LaunchScreen.storyboard */; };
 		5A65464520A1BF7100CD2B2A /* MajanCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65464420A1BF7100CD2B2A /* MajanCameraTests.swift */; };
 		5A65465020A1BF7100CD2B2A /* MajanCameraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65464F20A1BF7100CD2B2A /* MajanCameraUITests.swift */; };
+		5A65465E20A1C08B00CD2B2A /* api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65465D20A1C08B00CD2B2A /* api.swift */; };
+		5A65466020A1C0FE00CD2B2A /* Cons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65465F20A1C0FE00CD2B2A /* Cons.swift */; };
+		5A65466320A1C33000CD2B2A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A65466220A1C33000CD2B2A /* Alamofire.framework */; };
+		5A65466520A1C33B00CD2B2A /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A65466420A1C33B00CD2B2A /* ObjectMapper.framework */; };
+		5A65466720A1C35A00CD2B2A /* apiSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65466620A1C35A00CD2B2A /* apiSchema.swift */; };
+		5A65466920A1E8D300CD2B2A /* ObjectMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5A65466420A1C33B00CD2B2A /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A65466A20A1E8D800CD2B2A /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5A65466220A1C33000CD2B2A /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A65466C20A2ADC100CD2B2A /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65466B20A2ADC100CD2B2A /* Extension.swift */; };
+		5A65466E20A2ADF000CD2B2A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65466D20A2ADF000CD2B2A /* Helper.swift */; };
+		5A65467020A2BE3100CD2B2A /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65466F20A2BE3100CD2B2A /* CheckViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +43,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5A65466820A1E8BA00CD2B2A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5A65466A20A1E8D800CD2B2A /* Alamofire.framework in CopyFiles */,
+				5A65466920A1E8D300CD2B2A /* ObjectMapper.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5A65462C20A1BF6C00CD2B2A /* MajanCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MajanCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A65462F20A1BF6C00CD2B2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +71,14 @@
 		5A65464B20A1BF7100CD2B2A /* MajanCameraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MajanCameraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A65464F20A1BF7100CD2B2A /* MajanCameraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajanCameraUITests.swift; sourceTree = "<group>"; };
 		5A65465120A1BF7100CD2B2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A65465D20A1C08B00CD2B2A /* api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.swift; sourceTree = "<group>"; };
+		5A65465F20A1C0FE00CD2B2A /* Cons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cons.swift; sourceTree = "<group>"; };
+		5A65466220A1C33000CD2B2A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		5A65466420A1C33B00CD2B2A /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		5A65466620A1C35A00CD2B2A /* apiSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiSchema.swift; sourceTree = "<group>"; };
+		5A65466B20A2ADC100CD2B2A /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		5A65466D20A2ADF000CD2B2A /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		5A65466F20A2BE3100CD2B2A /* CheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +86,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A65466520A1C33B00CD2B2A /* ObjectMapper.framework in Frameworks */,
+				5A65466320A1C33000CD2B2A /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +115,7 @@
 				5A65464320A1BF7100CD2B2A /* MajanCameraTests */,
 				5A65464E20A1BF7100CD2B2A /* MajanCameraUITests */,
 				5A65462D20A1BF6C00CD2B2A /* Products */,
+				5A65466120A1C32F00CD2B2A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +134,12 @@
 			children = (
 				5A65462F20A1BF6C00CD2B2A /* AppDelegate.swift */,
 				5A65463120A1BF6C00CD2B2A /* ViewController.swift */,
+				5A65466F20A2BE3100CD2B2A /* CheckViewController.swift */,
+				5A65465D20A1C08B00CD2B2A /* api.swift */,
+				5A65465F20A1C0FE00CD2B2A /* Cons.swift */,
+				5A65466620A1C35A00CD2B2A /* apiSchema.swift */,
+				5A65466B20A2ADC100CD2B2A /* Extension.swift */,
+				5A65466D20A2ADF000CD2B2A /* Helper.swift */,
 				5A65463320A1BF6C00CD2B2A /* Main.storyboard */,
 				5A65463620A1BF7100CD2B2A /* Assets.xcassets */,
 				5A65463820A1BF7100CD2B2A /* LaunchScreen.storyboard */,
@@ -125,6 +166,15 @@
 			path = MajanCameraUITests;
 			sourceTree = "<group>";
 		};
+		5A65466120A1C32F00CD2B2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A65466420A1C33B00CD2B2A /* ObjectMapper.framework */,
+				5A65466220A1C33000CD2B2A /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +185,7 @@
 				5A65462820A1BF6C00CD2B2A /* Sources */,
 				5A65462920A1BF6C00CD2B2A /* Frameworks */,
 				5A65462A20A1BF6C00CD2B2A /* Resources */,
+				5A65466820A1E8BA00CD2B2A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -256,7 +307,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A65466020A1C0FE00CD2B2A /* Cons.swift in Sources */,
+				5A65467020A2BE3100CD2B2A /* CheckViewController.swift in Sources */,
+				5A65466E20A2ADF000CD2B2A /* Helper.swift in Sources */,
 				5A65463220A1BF6C00CD2B2A /* ViewController.swift in Sources */,
+				5A65465E20A1C08B00CD2B2A /* api.swift in Sources */,
+				5A65466720A1C35A00CD2B2A /* apiSchema.swift in Sources */,
+				5A65466C20A2ADC100CD2B2A /* Extension.swift in Sources */,
 				5A65463020A1BF6C00CD2B2A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +489,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DZCQ76F8J7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MajanCamera/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +511,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DZCQ76F8J7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MajanCamera/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
