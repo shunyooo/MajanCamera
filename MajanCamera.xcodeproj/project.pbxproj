@@ -24,6 +24,10 @@
 		5A65466C20A2ADC100CD2B2A /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65466B20A2ADC100CD2B2A /* Extension.swift */; };
 		5A65466E20A2ADF000CD2B2A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65466D20A2ADF000CD2B2A /* Helper.swift */; };
 		5A65467020A2BE3100CD2B2A /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65466F20A2BE3100CD2B2A /* CheckViewController.swift */; };
+		5A99CD7E20A5864300BF5392 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A99CD7D20A5864300BF5392 /* LandingViewController.swift */; };
+		5A99CD8020A5873F00BF5392 /* CorrectionPiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A99CD7F20A5873F00BF5392 /* CorrectionPiViewController.swift */; };
+		5A99CD8220A6E9D900BF5392 /* PiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A99CD8120A6E9D900BF5392 /* PiCollectionViewCell.swift */; };
+		5A99CD8420A6F6B600BF5392 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A99CD8320A6F6B600BF5392 /* CircleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,10 @@
 		5A65466B20A2ADC100CD2B2A /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		5A65466D20A2ADF000CD2B2A /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		5A65466F20A2BE3100CD2B2A /* CheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
+		5A99CD7D20A5864300BF5392 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		5A99CD7F20A5873F00BF5392 /* CorrectionPiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectionPiViewController.swift; sourceTree = "<group>"; };
+		5A99CD8120A6E9D900BF5392 /* PiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiCollectionViewCell.swift; sourceTree = "<group>"; };
+		5A99CD8320A6F6B600BF5392 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,15 +140,17 @@
 		5A65462E20A1BF6C00CD2B2A /* MajanCamera */ = {
 			isa = PBXGroup;
 			children = (
-				5A65462F20A1BF6C00CD2B2A /* AppDelegate.swift */,
-				5A65463120A1BF6C00CD2B2A /* ViewController.swift */,
-				5A65466F20A2BE3100CD2B2A /* CheckViewController.swift */,
-				5A65465D20A1C08B00CD2B2A /* api.swift */,
-				5A65465F20A1C0FE00CD2B2A /* Cons.swift */,
-				5A65466620A1C35A00CD2B2A /* apiSchema.swift */,
-				5A65466B20A2ADC100CD2B2A /* Extension.swift */,
-				5A65466D20A2ADF000CD2B2A /* Helper.swift */,
 				5A65463320A1BF6C00CD2B2A /* Main.storyboard */,
+				5A65462F20A1BF6C00CD2B2A /* AppDelegate.swift */,
+				5A99CD7B20A3C7F100BF5392 /* Test */,
+				5A99CD7C20A3C85000BF5392 /* Api */,
+				5A65465F20A1C0FE00CD2B2A /* Cons.swift */,
+				5A65466B20A2ADC100CD2B2A /* Extension.swift */,
+				5A99CD7D20A5864300BF5392 /* LandingViewController.swift */,
+				5A99CD7F20A5873F00BF5392 /* CorrectionPiViewController.swift */,
+				5A99CD8120A6E9D900BF5392 /* PiCollectionViewCell.swift */,
+				5A65466D20A2ADF000CD2B2A /* Helper.swift */,
+				5A99CD8320A6F6B600BF5392 /* CircleButton.swift */,
 				5A65463620A1BF7100CD2B2A /* Assets.xcassets */,
 				5A65463820A1BF7100CD2B2A /* LaunchScreen.storyboard */,
 				5A65463B20A1BF7100CD2B2A /* Info.plist */,
@@ -173,6 +183,24 @@
 				5A65466220A1C33000CD2B2A /* Alamofire.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A99CD7B20A3C7F100BF5392 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				5A65463120A1BF6C00CD2B2A /* ViewController.swift */,
+				5A65466F20A2BE3100CD2B2A /* CheckViewController.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		5A99CD7C20A3C85000BF5392 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				5A65466620A1C35A00CD2B2A /* apiSchema.swift */,
+				5A65465D20A1C08B00CD2B2A /* api.swift */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,11 +337,15 @@
 			files = (
 				5A65466020A1C0FE00CD2B2A /* Cons.swift in Sources */,
 				5A65467020A2BE3100CD2B2A /* CheckViewController.swift in Sources */,
+				5A99CD8020A5873F00BF5392 /* CorrectionPiViewController.swift in Sources */,
+				5A99CD8420A6F6B600BF5392 /* CircleButton.swift in Sources */,
 				5A65466E20A2ADF000CD2B2A /* Helper.swift in Sources */,
+				5A99CD8220A6E9D900BF5392 /* PiCollectionViewCell.swift in Sources */,
 				5A65463220A1BF6C00CD2B2A /* ViewController.swift in Sources */,
 				5A65465E20A1C08B00CD2B2A /* api.swift in Sources */,
 				5A65466720A1C35A00CD2B2A /* apiSchema.swift in Sources */,
 				5A65466C20A2ADC100CD2B2A /* Extension.swift in Sources */,
+				5A99CD7E20A5864300BF5392 /* LandingViewController.swift in Sources */,
 				5A65463020A1BF6C00CD2B2A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
