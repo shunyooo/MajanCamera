@@ -29,7 +29,9 @@ class PiSchema: Mappable {
     var xmax:CGFloat = 0.0
     var ymax:CGFloat = 0.0
     var conf:CGFloat = 0.0
-    var frame:CGRect{ get{return CGRect(x: xmin, y: ymin, width: xmax-xmin, height: ymax-ymin)} }
+    var frame:CGRect{ get{return CGRect(x: xmin, y: ymin, width: xmax-xmin, height: ymax-ymin)}
+    }
+    var index:Int?{ get{return Cons.piIndexes.index(of: self.name)}}
     
     required init?(map: Map) {
     }

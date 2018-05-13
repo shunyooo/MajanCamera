@@ -12,4 +12,7 @@ class PiCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
     
+    func setImage(piname:String){
+        self.imageView.image = UIImage.init(named: "pi-\(piname)")
+    }
 }

@@ -28,6 +28,7 @@
 		5A99CD8020A5873F00BF5392 /* CorrectionPiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A99CD7F20A5873F00BF5392 /* CorrectionPiViewController.swift */; };
 		5A99CD8220A6E9D900BF5392 /* PiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A99CD8120A6E9D900BF5392 /* PiCollectionViewCell.swift */; };
 		5A99CD8420A6F6B600BF5392 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A99CD8320A6F6B600BF5392 /* CircleButton.swift */; };
+		5A99CD8620A826C100BF5392 /* GestureUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A99CD8520A826C100BF5392 /* GestureUIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		5A99CD7F20A5873F00BF5392 /* CorrectionPiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectionPiViewController.swift; sourceTree = "<group>"; };
 		5A99CD8120A6E9D900BF5392 /* PiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A99CD8320A6F6B600BF5392 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		5A99CD8520A826C100BF5392 /* GestureUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureUIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				5A99CD8120A6E9D900BF5392 /* PiCollectionViewCell.swift */,
 				5A65466D20A2ADF000CD2B2A /* Helper.swift */,
 				5A99CD8320A6F6B600BF5392 /* CircleButton.swift */,
+				5A99CD8520A826C100BF5392 /* GestureUIImageView.swift */,
 				5A65463620A1BF7100CD2B2A /* Assets.xcassets */,
 				5A65463820A1BF7100CD2B2A /* LaunchScreen.storyboard */,
 				5A65463B20A1BF7100CD2B2A /* Info.plist */,
@@ -337,6 +340,7 @@
 			files = (
 				5A65466020A1C0FE00CD2B2A /* Cons.swift in Sources */,
 				5A65467020A2BE3100CD2B2A /* CheckViewController.swift in Sources */,
+				5A99CD8620A826C100BF5392 /* GestureUIImageView.swift in Sources */,
 				5A99CD8020A5873F00BF5392 /* CorrectionPiViewController.swift in Sources */,
 				5A99CD8420A6F6B600BF5392 /* CircleButton.swift in Sources */,
 				5A65466E20A2ADF000CD2B2A /* Helper.swift in Sources */,

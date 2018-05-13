@@ -96,7 +96,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="1B3-eZ-7sE">
-                                        <rect key="frame" x="35" y="33" width="176.5" height="101"/>
+                                        <rect key="frame" x="40" y="50" width="176.5" height="101"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Majan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jar-7o-TZO">
                                                 <rect key="frame" x="0.0" y="0.0" width="136.5" height="55.5"/>
@@ -195,8 +195,8 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Icx-ZS-P75" secondAttribute="bottom" constant="200" id="CyU-zd-NbQ"/>
                                     <constraint firstItem="Icx-ZS-P75" firstAttribute="centerX" secondItem="Wxk-CD-7Ml" secondAttribute="centerX" id="HNL-DR-C91"/>
-                                    <constraint firstItem="1B3-eZ-7sE" firstAttribute="top" secondItem="Wxk-CD-7Ml" secondAttribute="top" constant="33" id="m9k-Z2-BiY"/>
-                                    <constraint firstItem="1B3-eZ-7sE" firstAttribute="leading" secondItem="Wxk-CD-7Ml" secondAttribute="leading" constant="35" id="tq1-aE-vdT"/>
+                                    <constraint firstItem="1B3-eZ-7sE" firstAttribute="top" secondItem="Wxk-CD-7Ml" secondAttribute="top" constant="50" id="m9k-Z2-BiY"/>
+                                    <constraint firstItem="1B3-eZ-7sE" firstAttribute="leading" secondItem="Wxk-CD-7Ml" secondAttribute="leading" constant="40" id="tq1-aE-vdT"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -232,7 +232,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="候補牌" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XC8-3d-L27">
-                                <rect key="frame" x="10" y="358" width="40" height="10"/>
+                                <rect key="frame" x="10" y="371" width="40" height="10"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="9r0-b4-DTJ"/>
                                 </constraints>
@@ -241,9 +241,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vRQ-Bq-5LF">
-                                <rect key="frame" x="7" y="299" width="361" height="47"/>
+                                <rect key="frame" x="7" y="299" width="361" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="a4s-Do-3Jl"/>
+                                    <constraint firstAttribute="height" constant="60" id="a4s-Do-3Jl"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="8lq-6x-1YY">
                                     <size key="itemSize" width="33" height="45"/>
@@ -260,7 +260,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pi-p2" translatesAutoresizingMaskIntoConstraints="NO" id="hZ6-kr-tcD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="33" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="33" height="45"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -277,7 +277,7 @@
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bdk-Lm-ds3">
-                                <rect key="frame" x="24" y="376" width="327" height="271"/>
+                                <rect key="frame" x="24" y="389" width="327" height="271"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="271" id="3aM-K9-47i"/>
                                 </constraints>
@@ -296,7 +296,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pi-m1" translatesAutoresizingMaskIntoConstraints="NO" id="TL4-hZ-qby">
-                                                    <rect key="frame" x="0.0" y="0.0" width="38" height="51"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="38" height="52"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -312,7 +312,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yjf-Vu-lEr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yjf-Vu-lEr" customClass="GestureUIImageView" customModule="MajanCamera" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="267" id="K0C-5W-YSl"/>
@@ -325,7 +325,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K20-60-RMI">
-                                                <rect key="frame" x="8" y="6" width="86" height="30"/>
+                                                <rect key="frame" x="8" y="6" width="63" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Home">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

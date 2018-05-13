@@ -8,14 +8,17 @@
 
 import UIKit
 
-class CollectionPiViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class CollectionPiViewController: UIViewController{
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: GestureUIImageView!
     @IBOutlet weak var detectedPisCollectionView: UICollectionView!
     @IBOutlet weak var candPisCollectionView: UICollectionView!
     
     var pis:PisSchema?
     var piImage:UIImage?
+    
+    let numTileHand = 14
+    let numTileCandLine = 9
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +28,18 @@ class CollectionPiViewController: UIViewController, UICollectionViewDataSource, 
         candPisCollectionView.dataSource = self
         candPisCollectionView.delegate = self
         
+        self.detectedPisCollectionView.backgroundColor = .clear
+        self.candPisCollectionView.backgroundColor = .clear
+        
         imageView.image = piImage
         imageView.contentMode = .scaleAspectFit
         imageView.backgroundColor = .black
         
         
+        
         if let pis = self.pis{
+            
+            pis.pis.sort(by: {$0.index! < $1.index!})
             
             for pi in pis.pis{
                 let layer = CAShapeLayer.init()
@@ -49,10 +58,18 @@ class CollectionPiViewController: UIViewController, UICollectionViewDataSource, 
         super.didReceiveMemoryWarning()
     }
     
+    @IBAction func toHomeButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
+}
+
+// MARK:CollectionView系
+extension CollectionPiViewController:UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case detectedPisCollectionView:
-            return 9
+            return numTileHand
         case candPisCollectionView:
             return Cons.piIndexes.count
         default:
@@ -62,15 +79,54 @@ class CollectionPiViewController: UIViewController, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:PiCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "picell", for: indexPath) as! PiCollectionViewCell
+        switch collectionView {
+        case detectedPisCollectionView:
+            if let pis = pis{
+                if pis.pis.count > indexPath.row{
+                    cell.setImage(piname: pis.pis[indexPath.row].name)
+                }else{
+                    cell.setImage(piname: "back")
+                }
+            }
+        case candPisCollectionView:
+            cell.setImage(piname: Cons.piIndexes[indexPath.row])
+        default:
+            break
+        }
         return cell
     }
-    
-    @IBAction func toHomeButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0);
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        var numAtLine:CGFloat = 0
+        switch collectionView {
+        case detectedPisCollectionView:
+            numAtLine = CGFloat(numTileHand)
+        case candPisCollectionView:
+            numAtLine = CGFloat(numTileCandLine)
+        default:
+            break
+        }
+        
+        
+        let width = collectionView.bounds.width/numAtLine
+        let height = width * 90/66
+        return CGSize(width: width, height: height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
 }
-
 
 // MARK:BeizePath 描画系
 extension CollectionPiViewController{
