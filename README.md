@@ -2,6 +2,8 @@
 
 麻雀得点の自動計算ツール。カメラでとれば、得点が自動算出される。
 
+![test](https://user-images.githubusercontent.com/17490886/40102935-c4fbad0a-5926-11e8-9771-3a669c831ddb.gif)
+
 
 
 # Icon
