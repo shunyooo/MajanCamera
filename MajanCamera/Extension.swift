@@ -9,6 +9,23 @@
 import Foundation
 import UIKit
 
+extension CGPoint{
+    func calDistance(to:CGPoint)->CGFloat{
+        let xDis:CGFloat = self.x - to.x
+        let yDis:CGFloat = self.y - to.y
+        let dis = sqrtf(Float(xDis*xDis + yDis*yDis))
+        return CGFloat(dis)
+    }
+    
+    func calDiff(from:CGPoint)->CGPoint{
+        return CGPoint(x:self.x - from.x, y:self.y - from.y)
+    }
+    
+    func calAdd(with:CGPoint)->CGPoint{
+        return CGPoint(x:self.x + with.x, y:self.y + with.y)
+    }
+}
+
 extension UIViewController{
     func showSimpleAlert(title:String, message:String="", ok_handler:(()->Void)?=nil, cancel_handler:(()->Void)?=nil){
         

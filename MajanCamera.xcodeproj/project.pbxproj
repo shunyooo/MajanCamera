@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A475A8520ABEC1E00D806E2 /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A475A8420ABEC1E00D806E2 /* Schema.swift */; };
 		5A65463020A1BF6C00CD2B2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65462F20A1BF6C00CD2B2A /* AppDelegate.swift */; };
 		5A65463220A1BF6C00CD2B2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A65463120A1BF6C00CD2B2A /* ViewController.swift */; };
 		5A65463520A1BF6C00CD2B2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A65463320A1BF6C00CD2B2A /* Main.storyboard */; };
@@ -63,6 +64,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5A475A8420ABEC1E00D806E2 /* Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schema.swift; sourceTree = "<group>"; };
 		5A65462C20A1BF6C00CD2B2A /* MajanCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MajanCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A65462F20A1BF6C00CD2B2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A65463120A1BF6C00CD2B2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A475A8620ABEC2F00D806E2 /* Schema */ = {
+			isa = PBXGroup;
+			children = (
+				5A475A8420ABEC1E00D806E2 /* Schema.swift */,
+				5A65466620A1C35A00CD2B2A /* apiSchema.swift */,
+			);
+			path = Schema;
+			sourceTree = "<group>";
+		};
 		5A65462320A1BF6C00CD2B2A = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +157,7 @@
 				5A65462F20A1BF6C00CD2B2A /* AppDelegate.swift */,
 				5A99CD7B20A3C7F100BF5392 /* Test */,
 				5A99CD7C20A3C85000BF5392 /* Api */,
+				5A475A8620ABEC2F00D806E2 /* Schema */,
 				5A65465F20A1C0FE00CD2B2A /* Cons.swift */,
 				5A65466B20A2ADC100CD2B2A /* Extension.swift */,
 				5A99CD7D20A5864300BF5392 /* LandingViewController.swift */,
@@ -200,7 +212,6 @@
 		5A99CD7C20A3C85000BF5392 /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				5A65466620A1C35A00CD2B2A /* apiSchema.swift */,
 				5A65465D20A1C08B00CD2B2A /* api.swift */,
 			);
 			path = Api;
@@ -350,6 +361,7 @@
 				5A65466720A1C35A00CD2B2A /* apiSchema.swift in Sources */,
 				5A65466C20A2ADC100CD2B2A /* Extension.swift in Sources */,
 				5A99CD7E20A5864300BF5392 /* LandingViewController.swift in Sources */,
+				5A475A8520ABEC1E00D806E2 /* Schema.swift in Sources */,
 				5A65463020A1BF6C00CD2B2A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

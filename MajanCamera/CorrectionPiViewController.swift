@@ -19,11 +19,23 @@ class CollectionPiViewController: UIViewController{
     var pis:PisSchema?
     var piImage:UIImage?
     
+    var pisPos:PisPosSchema!
+    
     let numTileHand = 14
     let numTileCandLine = 9
     
+    // 現在ドラッグしている牌のインデックス
+    var draggingPiIndex:Int? = nil
+    var draggingState:DragState = .none
+    var draggingStartPoint:CGPoint = .zero
+    
+    // DEBUG用
+    var testLayer:CAShapeLayer? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.pisPos = PisPosSchema(image_id: (pis?.image_id)!)
         
         setupImageScrollView()
         setupCollectionView()
@@ -115,17 +127,56 @@ extension CollectionPiViewController:UICollectionViewDataSource, UICollectionVie
         return 0
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //let cell = collectionView.cellForItem(at: indexPath) as! PiCollectionViewCell
+        
+        for pipos in pisPos.pis{
+            pipos.layer.fillColor = UIColor.clear.cgColor
+        }
+        
+        switch collectionView {
+        case detectedPisCollectionView:
+            // 該当の図形をハイライト
+            if let pis = pisPos{
+                if pis.pis.count > indexPath.row{
+                    let pi = pis.pis[indexPath.row]
+                    pi.layer.fillColor = UIColor(red: 0, green: 100/255, blue: 100/255, alpha: 0.5).cgColor
+                    //cell.setImage(piname: pis.pis[indexPath.row].name)
+                }else{
+                    //cell.setImage(piname: "back")
+                }
+            }
+            
+            break
+        case candPisCollectionView:
+            break
+        default:
+            break
+        }
+    }
+    
 }
 
 // MARK:BeizePath 描画系
 extension CollectionPiViewController{
     
-    func drawPointAtImageView(_ point:CGPoint){
+    func drawCircleAtImageView(_ point:CGPoint, radius:CGFloat)->CAShapeLayer{
+        let layer = CAShapeLayer.init()
+        layer.frame = imageView.frame
+        layer.strokeColor = UIColor.yellow.cgColor
+        layer.fillColor = UIColor.clear.cgColor
+        let path3 = UIBezierPath(arcCenter: point, radius: radius, startAngle: 0, endAngle: CGFloat(Double.pi*2), clockwise: false)
+        layer.path = path3.cgPath
+        self.imageView.layer.addSublayer(layer)
+        return layer
+    }
+    
+    func drawPointAtImageView(_ point:CGPoint, size:CGFloat){
         let layer = CAShapeLayer.init()
         layer.frame = imageView.frame
         layer.strokeColor = UIColor.red.cgColor
         layer.fillColor = UIColor.clear.cgColor
-        let path3 = createBeizePath(rect: CGRect.init(x: point.x, y: point.y, width: 3, height: 3))
+        let path3 = createBeizePath(rect: CGRect.init(x: point.x, y: point.y, width: size, height: size))
         layer.path = path3.cgPath
         self.imageView.layer.addSublayer(layer)
     }
@@ -141,12 +192,17 @@ extension CollectionPiViewController{
     
     func drawPiToImageView(_ pi:PiSchema?){
         if let pi = pi{
-            let layer = CAShapeLayer.init()
+            var layer = CAShapeLayer.init()
             layer.frame = imageView.frame
             layer.strokeColor = UIColor.red.cgColor
             layer.fillColor = UIColor.clear.cgColor
-            let path3 = createBeizePath(imageView: imageView, pi: pi)
+            
+            let imageFrame = imageView.aspectFitFrame
+            let piInview = posPiInFrame(imageFrame!, pi: pi)
+            let path3 = createBeizePath(rect: piInview.frame)
             layer.path = path3.cgPath
+            
+            self.pisPos.pis.append(PiPosSchema(pi: pi, xminInview: piInview.xmin, yminInview: piInview.ymin, xmaxInview: piInview.xmax, ymaxInview: piInview.ymax, layer: &layer))
             self.imageView.layer.addSublayer(layer)
         }
     }
@@ -167,6 +223,16 @@ extension CollectionPiViewController{
         path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
         path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
         path.addLine(to: CGPoint(x: rect.minX, y: rect.minY))
+        return path
+    }
+    
+    func createBeizePath(topLeft:CGPoint, topRight:CGPoint, bottomLeft:CGPoint, bottomRight:CGPoint) -> UIBezierPath{
+        let path = UIBezierPath()
+        path.move(to: topLeft)
+        path.addLine(to: topRight)
+        path.addLine(to: bottomRight)
+        path.addLine(to: bottomLeft)
+        path.addLine(to: topLeft)
         return path
     }
     
@@ -227,21 +293,64 @@ extension CollectionPiViewController: UIScrollViewDelegate{
     
     @objc func longPress(gesture: UILongPressGestureRecognizer) -> Void {
         let tapPoint = gesture.location(in: imageView)
-        print(#function, gesture.state, tapPoint)
         
         switch gesture.state {
         case .began:
+            print(#function, gesture.state.rawValue, tapPoint)
             // 牌のプロット。
             // TODO:近くに点がある場合は、それを移動できるように。
+            // 近くのポイントの取得。どの牌のどの点か。
+            let (dstate, nearIndex, mindis) = pisPos.findNearPoint(from: tapPoint, threshold: 30)
+            self.draggingState = dstate
+            self.draggingPiIndex = nearIndex
+            if dstate != .none{
+                print("近点: \(dstate), \(nearIndex), \(mindis)")
+                self.draggingStartPoint = tapPoint
+            }else{
+                print("近くに点はありません")
+            }
+            
             // TODO:牌の新規作成の場合は、他の牌の大きさの中央値でプロットする。
-            drawPointAtImageView(tapPoint)
+            testLayer = drawCircleAtImageView(tapPoint, radius: 30)
         case .cancelled:
+            self.draggingState = .none
             break
         case .ended:
+            testLayer?.removeFromSuperlayer()
+            self.draggingState = .none
             break
         case .failed:
+            self.draggingState = .none
             break
         default:
+            let pi:PiPosSchema = self.pisPos.pis[draggingPiIndex!]
+            let diff = tapPoint.calDiff(from:draggingStartPoint)
+            draggingStartPoint = tapPoint
+            switch draggingState{
+                case .topLeft:
+                    pi.topLeft = pi.topLeft.calAdd(with:diff)
+                    pi.topRight.y = pi.topLeft.y
+                    pi.bottomLeft.x = pi.topLeft.x
+                
+                case .topRight:
+                    pi.topRight = pi.topRight.calAdd(with:diff)
+                    pi.topLeft.y = pi.topRight.y
+                    pi.bottomRight.x = pi.topRight.x
+                
+                case .bottomLeft:
+                    pi.bottomLeft = pi.bottomLeft.calAdd(with:diff)
+                    pi.bottomRight.y = pi.bottomLeft.y
+                    pi.topLeft.x = pi.bottomLeft.x
+                
+                case .bottomRight:
+                    pi.bottomRight = pi.bottomRight.calAdd(with:diff)
+                    pi.bottomLeft.y = pi.bottomRight.y
+                    pi.topRight.x = pi.bottomRight.x
+                
+                case .none: return
+            }
+            pi.layer.path = createBeizePath(topLeft: pi.topLeft, topRight: pi.topRight, bottomLeft: pi.bottomLeft, bottomRight: pi.bottomRight).cgPath
+            loadViewIfNeeded()
             break
         }
         
