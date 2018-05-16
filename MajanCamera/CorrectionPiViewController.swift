@@ -35,7 +35,17 @@ class CollectionPiViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.pisPos = PisPosSchema(image_id: (pis?.image_id)!)
+        if let pis = pis{
+            // 信頼度で14個を超えたら切る。
+            pis.pis.sort(by: {$0.conf > $1.conf})
+            pis.pis = pis.pis.prefix(numTileHand).map{$0}
+            print("-------------------")
+            dump(pis)
+            // 名前の順番にソートする。
+            pis.pis.sort(by: {$0.index! < $1.index!})
+            self.pisPos = PisPosSchema(image_id: (pis.image_id))
+        }
+        
         
         setupImageScrollView()
         setupCollectionView()
@@ -183,7 +193,6 @@ extension CollectionPiViewController{
     
     func drawPisAtImageView(_ pis:PisSchema?){
         if let pis = pis{
-            pis.pis.sort(by: {$0.index! < $1.index!})
             for pi in pis.pis{
                 drawPiToImageView(pi)
             }
